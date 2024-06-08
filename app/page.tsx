@@ -18,7 +18,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex justify-center items-start min-h-screen pt-10 bg-gray-50 dark:bg-purple-900">
+    <div className="flex justify-center items-start min-h-screen pt-10 bg-gray-50 dark:bg-purple-950">
       <div className="w-full max-w-md p-6 bg-purple-950 rounded-lg shadow-md dark:bg-purple-800">
         <label
           htmlFor="default-search"
@@ -47,7 +47,7 @@ export default function Home() {
         </div>
         {click && (
           <div className="mt-4 p-4 bg-gray-100 rounded-lg dark:bg-gray-700">
-          {countWords.length ==0 ? <p className="text-red-800 dark:text-red-800 text-center font-semibold">Please Enter  your sentence</p>:<div> {countWords.length ==1 ? <p className="text-gray-900 dark:text-white text-center font-semibold">There is {countWords.length} word in your sentence</p>: <p className="text-gray-900 dark:text-white text-center font-semibold">
+          {countWords.length ==0 ? <p className="text-red-800 dark:text-red-800 text-center font-semibold">Please Enter  your sentence</p>:<div> {countWords.length ==1 ? <p className="text-red-gray-900 dark:text-white text-center font-semibold">There is {countWords.length} word in your sentence</p>: <p className="text-gray-900 dark:text-white text-center font-semibold">
               There are {countWords.length} words in your sentence
             </p>}</div>}
           </div>

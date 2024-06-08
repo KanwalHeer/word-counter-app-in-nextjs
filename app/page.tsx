@@ -40,14 +40,14 @@ export default function Home() {
           <button
             onClick={handler}
             type="submit"
-            className="text-white absolute right-2.5 bottom-2.5 bg-purple-600 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"
+            className="text-white absolute right-2.5 bottom-2.5 bg-purple-600 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-900 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
           >
             Search
           </button>
         </div>
         {click && (
           <div className="mt-4 p-4 bg-gray-100 rounded-lg dark:bg-gray-700">
-          {countWords.length ==0 ? <p className="text-red-800 dark:text-white text-center font-semibold">Please Enter  your sentence</p>:<div> {countWords.length ==1 ? <p className="text-gray-900 dark:text-white text-center font-semibold">There is {countWords.length} word in your sentence</p>: <p className="text-gray-900 dark:text-white text-center font-semibold">
+          {countWords.length ==0 ? <p className="text-red-800 dark:text-red-800 text-center font-semibold">Please Enter  your sentence</p>:<div> {countWords.length ==1 ? <p className="text-gray-900 dark:text-white text-center font-semibold">There is {countWords.length} word in your sentence</p>: <p className="text-gray-900 dark:text-white text-center font-semibold">
               There are {countWords.length} words in your sentence
             </p>}</div>}
           </div>

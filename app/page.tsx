@@ -3,8 +3,8 @@ import { useState } from "react";
 
 export default function Home() {
   const [countWords, setCountWords] = useState<string[]>([]);
-  const [countCharacters, setcountCharacters] = useState<string>("");
-  const [countSentences, setSentensec] = useState<string[] | string>("");
+  const [countCharacters, setcountCharacters] = useState<string>(" ");
+  const [countSentences, setSentensec] = useState<string[] | string>(" ");
 
   const [inputValue, setInputValue] = useState("");
   const [click, setClick] = useState(false);
@@ -24,7 +24,7 @@ export default function Home() {
       .filter((word) => word !== "");
 
     setCountWords(newInput);
-    setcountCharacters(inputValue.replace(/\s+./g, ""));
+    setcountCharacters(inputValue.replace(/\s+./g, " "));
     setSentensec(
       inputValue
         .split(/[.!?]+/)

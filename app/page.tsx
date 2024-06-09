@@ -15,11 +15,15 @@ export default function Home() {
 
   const handler = () => {
     setClick(true)
-    const newInput = inputValue.trim().split(" ").filter(word => word !== "")
-    setCountWords(newInput)
-    setcountCharacters(inputValue.replace(/\s+./g, ''))
-    setSentensec(inputValue.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0))
-    setInputValue("")
+    
+      const newInput = inputValue.trim().split(" ").filter(word => word !== "")
+      
+        setCountWords(newInput)
+      setcountCharacters(inputValue.replace(/\s+./g, ''))
+      setSentensec(inputValue.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0))
+      setInputValue("")
+    
+    
   }
 
   return (
@@ -39,9 +43,10 @@ export default function Home() {
           <textarea
             onChange={onChangeHandler}
             value={inputValue}
+            
             id="default-search"
             className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500"
-            placeholder="Enter your sentence..."
+            placeholder="Enter your text..."
             rows={6}
             style={{ resize: 'none' }}
           />
@@ -58,8 +63,8 @@ export default function Home() {
           </button>
         {click && (
           <div className="mt-4 p-4 bg-gray-100 rounded-lg dark:bg-gray-700">
-          {countWords.length ==0 ? <p className="text-red-800 dark:text-white text-center font-semibold">Please Enter  your Paragraph</p>:<div> {countWords.length ==1 ? <p className="text-gray-900 dark:text-white text-center font-semibold">There is  {countWords.length} word and {countCharacters.length} charachters.</p>: <p className="text-gray-900 dark:text-white text-center font-semibold">
-              {countSentences.length > 0 && countSentences.length == 1 ?<span>There is {countSentences.length} sentence</span> :<span>There are {countSentences.length} sentences</span> }, {countWords.length} words and {countCharacters.length} charachters in your paragraph
+          {countWords.length ==0 ? <p className="text-red-800 dark:text-red-800 text-center font-semibold">Please Enter  your text</p>:<div> {countWords.length ==1 ? <p className="text-gray-900 dark:text-white text-center font-semibold">{countWords.length} word and {countCharacters.length} charachters.</p>: <p className="text-gray-900 dark:text-white text-center font-semibold">
+              {countSentences.length > 0 && countSentences.length == 1 ?<span>{countSentences.length} sentence</span> :<span>There are {countSentences.length} sentences</span> }, {countWords.length} words and {countCharacters.length} charachters.
             </p>}</div>}
           </div>
         )}

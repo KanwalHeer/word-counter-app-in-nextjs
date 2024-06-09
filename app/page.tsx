@@ -10,7 +10,9 @@ export default function Home() {
   const [click, setClick] = useState(false);
 
   const onChangeHandler = (e: any) => {
-    setInputValue(e.target.value);
+    setClick(false);
+    const normalizedValue = e.target.value.replace(/\s+/g, " "); // Replace multiple spaces with a single space
+    setInputValue(normalizedValue);
   };
 
   const handler = () => {

@@ -69,7 +69,7 @@ export default function Home() {
             <button
               onClick={clrarHandler}
               type="submit"
-              className="text-black mt-2 mb-2 p-2 text-xl font-bold bg-purple-400 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 rounded-lg px-4 py-2 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800 sm:mt-0"
+              className="text-black mt-2 mb-2 p-2 text-xl font-bold bg-purple-400 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 rounded-lg px-4 py-2 dark:bg-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-800 sm:mt-0"
             >
               Clear
             </button>
